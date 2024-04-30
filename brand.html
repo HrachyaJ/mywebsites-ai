@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colorful Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Noto+Serif+JP&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <style>
+    /* CSS code for colorful and interactive elements */
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      background: rgb(0,1,36);
+      background: linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(0,97,170,1) 64%, rgba(0,159,255,1) 100%);
+    }
+
+    h1 {
+      color: #ff6600;
+      text-align: center;
+      font-family: Noto Serif Japanese;
+    }
+
+    .container {
+      position: relative;
+      top: 35px;
+      bottom: 50px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 35px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 97%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input:hover {
+      opacity: 0.8;
+    }
+
+    .color-gradient {
+      background: linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(0,97,170,1) 64%, rgba(0,159,255,1) 100%);
+      display: block;
+      width: 100%;
+      padding: 10px;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 10s;
+      font-family: Noto Serif Japanese;
+      font-size: 20px;
+    }
+
+    h1 {
+      color: rgb(2,0,36);
+    }
+
+    .color-gradient:hover {
+      background: rgb(0,97,170);
+      background: linear-gradient(90deg, rgba(0,97,170,1) 0%, rgba(0,159,255,1) 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container animate">
+    <h1>Welcome to our Website!</h1>
+    <form>
+      <div class="form-group">
+        <label for="name"><sub>First Name:</sub></label>
+        <input type="text" id="name" name="name" placeholder="First Name" required min="1">
+      </div>
+      <div class="form-group">
+        <label for="name"><sub>Last Name:</sub></label>
+        <input type="text" id="name" name="name" placeholder="Last Name" required min="1">
+      </div>
+      <div class="form-group">
+        <label for="password"><sub>Password:</sub></label>
+        <input type="password" id="password" placeholder="Password" name="password" required min="4">
+      </div>
+      <div class="form-group">
+        <label for="email"><sub>Email:</sub></label>
+        <input type="email" id="email" name="email" placeholder="Email" required min="4">
+      </div>
+      <button class="color-gradient" type="submit"><b>Sign Up</b></button>
+    </form>
+  </div>
+</body>
+</html>
