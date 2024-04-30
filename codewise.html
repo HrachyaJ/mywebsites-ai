@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeWise | Home</title>
+<link rel="shortcut icon" href="Images/newcodewise.png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Noto+Serif+JP&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<style>
+   .codewiselogo {
+     width: 14em;
+     cursor: pointer;
+   }
+   .hover-underline-animation {
+     display: inline-block;
+     position: relative;
+     color: #0087ca;
+   }
+
+   .hover-underline-animation::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     transform: scaleX(0);
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     background-color: #0C0B0E;
+     transform-origin: top right;
+     transition: transform 0.25s ease-out;
+   }
+
+   .hover-underline-animation:hover::after {
+     transform: scaleX(1);
+     transform-origin: bottom left;
+   }
+   .dropdown-item {
+     background-color: transparent !important;
+   }
+   .dropdown-item:hover {
+     background-color: white !important;
+   }
+   .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {opacity: 0;}
+
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    .dropdown-toggle i {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .dropdown-menu.show ~ .dropdown-toggle i {
+      transform: rotate(180deg);
+    }
+
+    /* Loading animation styles */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loading i {
+      font-size: 3em;
+      color: #0c0b0e;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .mytoggler {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {opacity: 0;}
+
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      opacity: 0.65;
+      background-color: rgb(124, 194, 226);
+      margin-top: 0;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 40%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      color: black;
+      padding: 10px;
+      font-family: PT serif;
+    }
+
+    .text-overlay2 {
+      position: absolute;
+      top: 55%;
+      color: black;
+    }
+
+    @media only screen and (max-width: 1600px) {
+       .text-overlay {
+           font-size: 5rem;
+       }
+    }
+
+    @media only screen and (max-width: 1080px) {
+       .text-overlay {
+           font-size: 4rem;
+       }
+    }
+
+    @media only screen and (max-width: 835px) {
+       .text-overlay {
+           font-size: 3rem;
+       }
+   }
+
+   @media only screen and (max-width: 605px) {
+       .text-overlay {
+           font-size: 2rem;
+       }
+   }
+
+   @media only screen and (max-width: 396px) {
+       .text-overlay {
+           font-size: 1.7rem;
+       }
+   }
+
+   /* WARNING: SECOND OVERLAY  */
+   /* WARNING: SECOND OVERLAY  */
+   /* WARNING: SECOND OVERLAY  */
+   /* WARNING: SECOND OVERLAY  */
+
+   @media only screen and (max-width: 1600px) {
+      .text-overlay2 {
+          font-size: 2rem;
+          left: 3.8%;
+      }
+   }
+
+   @media only screen and (max-width: 1080px) {
+      .text-overlay2 {
+          font-size: 2rem;
+          left: 3.7%;
+      }
+   }
+
+   @media only screen and (max-width: 835px) {
+      .text-overlay2 {
+          font-size: 1.3rem;
+          left: 3.4%;
+      }
+  }
+
+  @media only screen and (max-width: 605px) {
+      .text-overlay2 {
+          font-size: 1rem;
+          left: 4%;
+      }
+  }
+
+  @media only screen and (max-width: 396px) {
+      .text-overlay2 {
+          font-size: 0.7rem;
+          left: 5%;
+      }
+  }
+    .workplace {
+        width: 100%;
+        height: auto;
+    }
+
+    .mybtn {
+      color: black;
+      border: 1px solid rgb(141, 187, 209);
+      border-radius: 5px;
+      background: rgb(141, 187, 209);
+      transition: background 0.5s, border 0.5s;
+    }
+
+    .mybtn1 {
+      position: absolute;
+      top: 65%;
+      left: 4%;
+      width: 8em;
+      font-size: 1.4em;
+      height: 50px;
+      color: black;
+      border: 1px solid rgb(141, 187, 209);
+      border-radius: 5px;
+      background: rgb(141, 187, 209);
+      transition: background 0.5s, border 0.5s;
+    }
+
+    .mybtn:hover {
+      background: rgb(124, 194, 226);
+      color: black;
+      border: 1px solid rgb(124, 194, 226);
+    }
+
+    .mybtn1:hover {
+      background: rgb(124, 194, 226);
+      color: black;
+      border: 1px solid rgb(124, 194, 226);
+    }
+
+    @media only screen and (max-width: 1600px) {
+      .mybtn1 {
+        width: 8em;
+        font-size: 1.4em;
+       }
+     }
+
+   @media only screen and (max-width: 1200px) {
+     .mybtn1 {
+        width: 8em;
+        font-size: 1.2em;
+        top: 72%;
+      }
+    }
+
+    @media only screen and (max-width: 835px) {
+      .mybtn1 {
+        width: 9em;
+        font-size: 1.1em;
+        top: 70%;
+       }
+     }
+
+   @media only screen and (max-width: 600px) {
+       .mybtn1 {
+        top: 75%;
+        width: 10em;
+        font-size: 1em;
+        }
+      }
+
+      @media only screen and (max-width: 396px) {
+          .mybtn1 {
+         top: 76%;
+         width: 100%;
+         font-size: 1em;
+           }
+         }
+
+      .workplace2 {
+        width: 32.5em;
+        height: 25em;
+        border: 1px solid white;
+        border-radius: 20px;
+      }
+
+     @media only screen and (max-width: 1200px) {
+         .workplace2 {
+           width: 24em;
+           height: 20em;
+        }
+      }
+
+      @media only screen and (max-width: 980px) {
+         .workplace2 {
+          width: 30em;
+          height: 25em;
+        }
+       }
+
+     @media only screen and (max-width: 600px) {
+         .workplace2 {
+           width: 28em;
+           height: 22em;
+         }
+        }
+
+        @media only screen and (max-width: 396px) {
+         .workplace2 {
+           width: 20em;
+           height: 17em;
+         }
+        }
+
+        .services {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+    }
+
+    .services h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 36px;
+        font-weight: 700;          .workplace2 {
+
+      }
+    }
+
+    .service-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .service-img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .service-item:hover .service-img {
+        transform: scale(1.1);
+    }
+
+    .text-block {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .service-item:hover .text-block {
+        transform: translateY(0);
+    }
+
+    .text-block h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: PT serif;
+    }
+
+    .text-block p {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .carousel-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+  }
+    .carousel-item img {
+      width: 10em;
+      height: 40em;
+      border: 1px solid #fff;
+      border-radius: 10px;
+    }
+    @media (min-width: 768px) {
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+    }
+    .carousel-indicators {
+    justify-content: center;
+}
+
+
+</style>
+<!-- colors for the website -->
+<!-- rgb(255, 255, 255) white -->
+<!-- rgb(175, 175, 175) grey -->
+<!-- rgb(158, 181, 192) grey/lightblue-->
+<!-- rgb(141, 187, 209) less grey/lightblue -->
+<!-- rgb(124, 194, 226) lightblue -->
+</head>
+<body>
+  <!-- Loading animation -->
+  <div class="loading">
+    <i class="fas fa-circle-notch"></i>
+  </div>
+    <div class="container-fluid bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <a class="navbar-brand"><img src="Images/codewiselogo.png" class="codewiselogo" alt="Brand Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <div class="mytoggler" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse right-top" id="navbarNav">
+          <ul class="navbar-nav">
+            <div>
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link hover-underline-animation" href="#Home">Home</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link hover-underline-animation" href="#About">About</a>
+               </li>
+               <li class="dropdown">
+                <a href="#" class="nav-link hover-underline-animation" data-toggle="dropdown">Services<i class="fas fa-chevron-down ml-1"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item hover-underline-animation nav-link text-center" href="#services">Web Design/Development</a></li>
+                  <li><a class="dropdown-item hover-underline-animation nav-link text-center" href="#services">Web Application Development</a></li>
+                  <li><a class="dropdown-item hover-underline-animation nav-link text-center" href="#services">Mobile App Development</a></li>
+                  <hr>
+                  <li><a class="dropdown-item hover-underline-animation nav-link text-center" href="#services">E-commerce Solutions</a></li>
+                  <li><a class="dropdown-item hover-underline-animation nav-link text-center" href="#services">User Experience (UX) Design</a></li>
+                  <li><a class="dropdown-item hover-underline-animation nav-link text-center" href="#services">Search Engine Optimization (SEO)</a></li>
+                </ul>
+              </li>
+               <li class="nav-item">
+                 <a class="nav-link hover-underline-animation" href="#Contact">Contact</a>
+               </li>
+             </ul>
+           </div>
+        </div>
+      </nav>
+  </div><br><br><br>
+    <div id="Home" class="image-container">
+      <img src="Images/web3.jpg" alt="Workplace" class="workplace">
+      <h1 class="text-overlay display-4">Elevate your web presence</h1><br>
+      <h1 class="text-overlay2">Harness tailor-made digital solutions to thrive online in Miami's dynamic market.</h1>
+      <button class="btn mybtn1 btn-lg" type="button"><b>Learn More</b><span> &raquo</span></button>
+    </div>
+  <div id="About" class="container-fluid bg-light pt-5 pb-5"><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="workplace2 img-responsive img-rounded" src="Images/web2.jpg" alt="Imagecode">
+        </div>
+        <div class="col-lg-2">
+            <br><br><br>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="display-3">About us</h2><br>
+          <h5>CodeWise is a leading web software development agency located in Miami. We specialize in creating innovative and tailored solutions to meet our clients' unique needs.</h5><br>
+          <h5>With a team of experienced professionals, we are committed to delivering high-quality, cutting-edge technology to drive our clients' success in the digital world.</h5>
+          <br>
+          <button class="btn mybtn bt-md">Learn More &raquo</button>
+        </div>
+      </div>
+    </div>
+  </div><br><br><br><br>
+  <section id="services" class="services">
+      <div class="container" style="position: relative;font-family: Arial;">
+          <h2>Our Services</h2><br>
+          <div class="row">
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                    <img class="service-img" src="Images/web1.jpg" alt="Web service">
+                    <div class="text-block">
+                      <h3>Web Design/Development</h3>
+                      <p>We create responsive and user-friendly websites.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                    <img class="service-img" src="Images/web2.jpg" alt="Web service">
+                    <div class="text-block">
+                      <h3>Web Application Development</h3>
+                      <p>Building innovative mobile applications for various platforms.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                    <img class="service-img" src="Images/web4.jpg" alt="Web service">
+                    <div class="text-block">
+                      <h3>Mobile App Development</h3>
+                      <p>Reach customers on the go with mobile apps.</p>
+                    </div>
+                  </div>
+              </div><br>
+              <div id="services" class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                    <img class="service-img" src="Images/web6.jpg" alt="Web service">
+                    <div class="text-block">
+                      <h3>E-commerce Platform Development</h3>
+                      <p>Create a powerful online shopping experience.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                    <img class="service-img" src="Images/web5.jpg" alt="Web service">
+                    <div class="text-block">
+                      <h3>User Experience (UX) Design</h3>
+                      <p>We provide straightforward, user-centric digital experiences that increase engagement and conversions.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                    <img class="service-img" src="Images/web7.jpg" alt="Web service">
+                    <div class="text-block">
+                      <h3>Search Engine Optimization (SEO)</h3>
+                      <p>Optimize your online presence to enhance visibility and organic traffic</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div><br>
+  </section>
+  <div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 carousel-image" src="Images/carousel1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-image" src="Images/carousel2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-image" src="Images/carousel3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-image" src="Images/carousel6.jpg" alt="Fourth slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-image" src="Images/carousel5.jpg" alt="Fifth slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </div><br><br>
+    <!-- <div class="container-fluid">
+      <div class="offertable">
+      <h2>Web Software Development Agency</h2><br>
+        <div class="row">
+            <div class="col-lg-4">
+                <div>
+                  <img src="Images/offer1.jpg" alt="Web service">
+
+                </div>
+            </div>
+            <div>
+                <div>
+                  <img src="Images/offer2.jpg" alt="Web service">
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div>
+                  <img src="Images/offer3.jpg" alt="Web service">
+
+                </div>
+            </div>
+        </div>
+     </div>
+  </div> -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+    // Hide loading animation when page is fully loaded
+    window.addEventListener('load', function() {
+      document.querySelector('.loading').style.display = 'none';
+    });
+    // Get the dropdown toggle element
+    var dropdownToggle = document.getElementById('services-dropdown');
+    // Listen for the dropdown menu being shown
+    dropdownToggle.addEventListener('click', function() {
+      var icon = dropdownToggle.querySelector('i');
+      icon.classList.toggle('rotate-180');
+    });
+  </script>
+</body>
+</html>
