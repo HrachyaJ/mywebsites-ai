@@ -339,9 +339,7 @@
         text-align: center;
         margin-bottom: 40px;
         font-size: 36px;
-        font-weight: 700;          .workplace2 {
-
-      }
+        font-weight: 700;
     }
 
     .service-item {
@@ -409,9 +407,115 @@
         }
     }
     .carousel-indicators {
-    justify-content: center;
+      justify-content: center;
+    }
+
+    .offer-img {
+      width: 100%;
+    }
+
+     .offertable h2 {
+       text-align: center;
+     }
+     .offertable p {
+       font-size: 20px;
+     }
+     .offer-item {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 30px;
+        transition: transform 0.3s ease-in-out;
+      }
+        .offer-item:hover {
+        transform: translateY(-5px);
+      }
+       .offer-img {
+         margin-bottom: 20px;
+         border: 1px solid #fff;
+         border-radius: 10px;
+       }
+       .checklist {
+          list-style: none;
+          padding: 0;
+      }
+
+      .checklist li {
+          margin-bottom: 10px;
+      }
+
+      .checklist i {
+          margin-right: 5px;
+      }
+      .badge {
+        background: #000;
+        color: #fff;
+      }
+
+      .mybackground {
+        background-color: rgb(230, 230, 230);
+      }
+
+      .myform {
+        margin: 40px 40px;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer i {
+        font-size: 1em;
+      }
+      .footer {
+  color: #000;
+  background: rgb(141, 187, 209);
+  font-size: 14px;
 }
 
+.footer h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li i {
+  margin-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icon {
+  color: #000;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.social-icon i {
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon i:hover {
+  color: inherit;
+}
+
+
+.footer p {
+  margin-bottom: 0;
+}
 
 </style>
 <!-- colors for the website -->
@@ -490,14 +594,17 @@
         </div>
       </div>
     </div>
-  </div><br><br><br><br>
+  </div>
+  <div class="container-fluid bg-light">
+    <br><br><br>
+  </div>
   <section id="services" class="services">
       <div class="container" style="position: relative;font-family: Arial;">
           <h2>Our Services</h2><br>
           <div class="row">
               <div class="col-lg-4 col-md-6">
                   <div class="service-item">
-                    <img class="service-img" src="Images/web1.jpg" alt="Web service">
+                    <img href="#offer" class="service-img" src="Images/web1.jpg" alt="Web service">
                     <div class="text-block">
                       <h3>Web Design/Development</h3>
                       <p>We create responsive and user-friendly websites.</p>
@@ -506,7 +613,7 @@
               </div>
               <div class="col-lg-4 col-md-6">
                   <div class="service-item">
-                    <img class="service-img" src="Images/web2.jpg" alt="Web service">
+                    <img href="#offer" class="service-img" src="Images/web2.jpg" alt="Web service">
                     <div class="text-block">
                       <h3>Web Application Development</h3>
                       <p>Building innovative mobile applications for various platforms.</p>
@@ -515,7 +622,7 @@
               </div>
               <div class="col-lg-4 col-md-6">
                   <div class="service-item">
-                    <img class="service-img" src="Images/web4.jpg" alt="Web service">
+                    <img href="#offer" class="service-img" src="Images/web4.jpg" alt="Web service">
                     <div class="text-block">
                       <h3>Mobile App Development</h3>
                       <p>Reach customers on the go with mobile apps.</p>
@@ -524,7 +631,7 @@
               </div><br>
               <div id="services" class="col-lg-4 col-md-6">
                   <div class="service-item">
-                    <img class="service-img" src="Images/web6.jpg" alt="Web service">
+                    <img href="#offer" class="service-img" src="Images/web6.jpg" alt="Web service">
                     <div class="text-block">
                       <h3>E-commerce Platform Development</h3>
                       <p>Create a powerful online shopping experience.</p>
@@ -533,7 +640,7 @@
               </div>
               <div class="col-lg-4 col-md-6">
                   <div class="service-item">
-                    <img class="service-img" src="Images/web5.jpg" alt="Web service">
+                    <img href="#offer" class="service-img" src="Images/web5.jpg" alt="Web service">
                     <div class="text-block">
                       <h3>User Experience (UX) Design</h3>
                       <p>We provide straightforward, user-centric digital experiences that increase engagement and conversions.</p>
@@ -542,7 +649,7 @@
               </div>
               <div class="col-lg-4 col-md-6">
                   <div class="service-item">
-                    <img class="service-img" src="Images/web7.jpg" alt="Web service">
+                    <img href="#offer" class="service-img" src="Images/web7.jpg" alt="Web service">
                     <div class="text-block">
                       <h3>Search Engine Optimization (SEO)</h3>
                       <p>Optimize your online presence to enhance visibility and organic traffic</p>
@@ -550,9 +657,9 @@
                   </div>
               </div>
           </div>
-        </div><br>
-  </section>
-  <div class="container-fluid">
+        </div>
+  </section><br><br>
+  <div class="container"><br>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -588,32 +695,116 @@
         </a>
     </div>
   </div><br><br>
-    <!-- <div class="container-fluid">
-      <div class="offertable">
-      <h2>Web Software Development Agency</h2><br>
+  <div class="container-fluid bg-light">
+    <div class="offertable"><br>
+        <h2>Web Software Development Agency</h2><br>
         <div class="row">
             <div class="col-lg-4">
-                <div>
-                  <img src="Images/offer1.jpg" alt="Web service">
-
-                </div>
-            </div>
-            <div>
-                <div>
-                  <img src="Images/offer2.jpg" alt="Web service">
-
+                <div id="offer" class="offer-item">
+                    <img class="img-responsive img-rounded offer-img" src="Images/offer1.jpg" alt="web service">
+                    <h3>Basic Web Development</h3>
+                    <h1>$500</h1>
+                    <p><small>per project</small></p>
+                    <p>Customized web solutions for your business.</p>
+                    <ul class="checklist">
+                        <li><i class="fa fa-check"></i> Responsive</li>
+                        <li><i class="fa fa-check"></i> User-friendly</li>
+                        <li><i class="fa fa-check"></i> SEO optimized</li>
+                    </ul>
+                    <a href="#" class="btn mybtn bt-md">Learn More &raquo</a><br>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div>
-                  <img src="Images/offer3.jpg" alt="Web service">
-
+                <div id="offer" class="offer-item">
+                    <img class="img-responsive img-rounded offer-img" src="Images/offer2.jpg" alt="Web service">
+                    <h1 class="badge">POPULAR</h1>
+                    <h3>Advanced Web Development</h3>
+                    <h1>$1000</h1>
+                    <p><small>per project</small></p>
+                    <p>Enhanced web features for a superior user experience.</p>
+                    <ul class="checklist">
+                        <li><i class="fa fa-check"></i> E-commerce integration</li>
+                        <li><i class="fa fa-check"></i> Payment gateway setup</li>
+                        <li><i class="fa fa-check"></i> Custom API development</li>
+                    </ul>
+                    <a href="#" class="btn mybtn bt-md">Learn More &raquo</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div id="offer" class="offer-item">
+                    <img class="img-responsive img-rounded offer-img" src="Images/offer3.jpg" alt="Web service">
+                    <h3>Premium Web Development</h3>
+                    <h1>$1500</h1>
+                    <p><small>per project</small></p>
+                    <p>Tailored solutions to meet your unique business requirements.</p>
+                    <ul class="checklist">
+                        <li><i class="fa fa-check"></i> Content management system</li>
+                        <li><i class="fa fa-check"></i> Mobile app development</li>
+                        <li><i class="fa fa-check"></i> Social media integration</li>
+                    </ul>
+                    <a href="#" class="btn mybtn bt-md">Learn More &raquo</a>
                 </div>
             </div>
         </div>
-     </div>
-  </div> -->
-
+    </div>
+</div>
+<div id="Contact" class="container-fluid bg-light py-5"><br><br><br><br>
+  <div class="row align-items-start myform">
+    <div class="col-lg-6">
+      <div class="text-left mb-5">
+        <h3 class="font-weight-bold mb-3">Get in touch</h3>
+        <p class="text-muted">Send us a message and we'll get back to you as soon as we can.</p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <form>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Name...">
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="email" class="form-control form-control-lg" placeholder="Email...">
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control form-control-lg" name="message" rows="8" placeholder="Your Message..."></textarea><br>
+          <button type="submit" class="btn mybtn btn-lg float-right">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="mb-4">About Us</h4>
+        <p>We are a leading web software development agency, providing cutting-edge solutions to businesses of all sizes.</p><br>
+      </div>
+      <div class="col-md-4">
+        <h4 class="mb-4">Contact Us</h4>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-map-marker-alt mr-2"></i>123 Main Street, Anytown USA</li>
+          <li><i class="fas fa-phone-alt mr-2"></i>+1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope mr-2"></i>info@websoftwaredevagency.com</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4 class="mb-4">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2024 Web Software Development Agency | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
