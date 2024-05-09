@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMERCITY | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Cinzel:wght@400..900&family=Kode+Mono:wght@400..700&family=Noto+Serif+JP&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.hero {
+  background-image: linear-gradient(to bottom, #C9E4CA, #F7F7F7);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-family: Allerta Stencil;
+}
+
+.products {
+  padding: 40px;
+}
+
+.products .row {
+  justify-content: center;
+}
+
+.products .col-md-4 {
+  margin-bottom: 20px;
+}
+
+.products img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.products h5 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.products p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.products button {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.products button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.products button:active {
+  background-image: linear-gradient(to bottom, #333333, #666666);
+}
+
+.about {
+  padding: 40px;
+}
+
+.about p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  padding: 40px;
+}
+
+.contact form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .form-group label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact .form-group input, .contact .form-group textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.contact .form-group input:focus, .contact .form-group textarea:focus {
+  border-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: #C9E4CA;
+  color: #000;
+  cursor: pointer;
+  border-color: #C9E4CA;
+}
+
+.contact button[type="submit"]:hover {
+  background-color: #C9E4CA;
+  opacity: 0.8;
+  border-color: #45a049;
+}
+
+.footer {
+  background-image: linear-gradient(to bottom, #C9E4CA, #F7F7F7);
+  color: #000;
+  padding: 20px;
+  text-align: center;
+  clear: both;
+}
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  font-family: Kode Mono;
+  border: 15px;
+}
+
+.nav-link {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:not(.mybtn2):hover {
+    transform: scale(1.1);
+}
+
+/* .mybtn1 {
+  background-image: linear-gradient(to bottom, #FFC107, #FF69B4);
+  color: #fff;
+} */
+
+.header .header-actions-action--cart {
+    margin-left: 10px; /* Adjust the value as needed */
+}
+
+.btn-prim {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: #fff;
+}
+
+.btn-prim:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    color: #fff;
+}
+
+.mybtn1 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.mybtn1:hover {
+    transform: scale(1.1);
+}
+
+.mybtn2 {
+    border: 1px solid #000;
+    font-family: sans-serif;
+    transition: background 0.5s, color 0.5s;
+}
+
+.mybtn2:hover {
+   background: #000;
+   color: #fff;
+}
+
+.about .container-fluid {
+  padding: 80px 50px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+}
+
+.about {
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.about p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+.about .btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.about .btn:hover {
+  background-color: #45a049;
+}
+
+.navbar-toggler i {
+  font-size: 1.5em;
+}
+
+.social-icon {
+  display: inline;
+  justify-content: flex-end;
+  font-size: 24px;
+  color: #000; /* Facebook blue */
+}
+
+.social-icon:hover {
+  color: #3B5998; /* Facebook hover blue */
+}
+
+.social-icon .fa-facebook-f {
+  color: #000; /* Facebook blue */
+  transition: color 0.3s;
+}
+
+.social-icon .fa-facebook-f:hover {
+  color: #3B5998; /* Facebook hover blue */
+}
+
+.social-icon .fa-twitter {
+  color: #000; /* Twitter blue */
+  transition: color 0.3s;
+}
+
+.social-icon .fa-twitter:hover {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.social-icon .fa-instagram {
+  color: #000; /* Instagram pink */
+  transition: color 0.3s;
+}
+
+.social-icon .fa-instagram:hover {
+  color: #E1306C; /* Instagram hover pink */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer.container {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  margin-left: 10px; /* Adjust spacing between social icons */
+}
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+              COMMERCITY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cart">Cart
+                          <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero text-dark">
+        <div class="container">
+            <h1 class="display-4">Experience Shopping <br> Redefined</h1>
+            <p class="lead">Discover an unparalleled online shopping experience with Commercity, your one-stop ecommerce store based in Prague.</p>
+            <a class="btn btn-prim mybtn1" href="#products"><b>Explore Our Products</b><a>
+        </div>
+    </section><br><br>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+            <h2>About Us</h2>
+            <p>At Our Company, we are passionate about providing an exceptional online shopping experience. With a commitment to quality, convenience, and customer satisfaction, we offer a curated selection of premium products to meet your lifestyle needs.</p>
+            <p> Our aim is to make every purchase a seamless and enjoyable journey, from discovery to delivery. Discover the perfect blend of convenience and quality with us.</p>
+        </div><br><br><br>
+    </section>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="text-center">Our Products</h2><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Portable Power Bank</h5>
+                    <p>A compact power bank that can charge multiple devices on the go.</p>
+                    <p>$99.9</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+                <div class="col-md-4">
+                    <h5>Wireless Earbuds</h5>
+                    <p>High-quality earbuds with long battery life and sleek design.</p>
+                    <p>$199.9</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+                <div class="col-md-4">
+                    <h5>Handmade Jewelry</h5>
+                    <p>Unique, handmade jewelry pieces with intricate designs and high-quality materials.</p>
+                    <p>$299.9</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Coffee Maker</h5>
+                    <p>A high-end coffee maker with advanced features like temperature control and customizable brewing.</p>
+                    <p>$449.9</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+                <div class="col-md-4">
+                    <h5>Smart Thermostat</h5>
+                    <p> A smart thermostat that learns your schedule and preferences to optimize heating and cooling with your phone or your voice.</p>
+                    <p>$599.9</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+                <div class="col-md-4">
+                    <h5>Smart Lighting</h5>
+                    <p>A smart lighting system that can be controlled remotely and adjusts brightness based on the time of day.</p>
+                    <p>$999.9</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div><br><br>
+    </section><br>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="text-center">Get in Touch</h2><br>
+            <form action="#">
+                <div class="form-group">
+                    <label for="name"><sub>Name:</sub></label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email"><sub>Email:</sub></label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message"><sub>Message:</sub></label>
+                    <textarea class="form-control" id="message" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </section><br>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <p><b>&copy; 2024 COMMERCITY | All rights reserved.</b></p>
+          </div>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
