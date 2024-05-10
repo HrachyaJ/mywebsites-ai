@@ -80,10 +80,6 @@ body {
   background-image: linear-gradient(to bottom, #333333, #666666);
 }
 
-.about {
-  padding: 40px;
-}
-
 .about p {
   font-size: 16px;
   margin-bottom: 20px;
@@ -170,11 +166,6 @@ body {
     transform: scale(1.1);
 }
 
-/* .mybtn1 {
-  background-image: linear-gradient(to bottom, #FFC107, #FF69B4);
-  color: #fff;
-} */
-
 .header .header-actions-action--cart {
     margin-left: 10px; /* Adjust the value as needed */
 }
@@ -189,6 +180,10 @@ body {
     background-color: #45a049;
     border-color: #45a049;
     color: #fff;
+}
+
+.btn-prim:active {
+  background:
 }
 
 .mybtn1 {
@@ -315,6 +310,34 @@ body {
 .social-icon {
   margin-left: 10px; /* Adjust spacing between social icons */
 }
+
+.service-text {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+@media (max-width: 767.98px) {
+  .service-text {
+    text-align: center !important;
+  }
+}
+
+.fa {
+  font-size: 2em;
+}
 </style>
 </head>
 <body>
@@ -333,13 +356,13 @@ body {
                         <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cart">Cart
+                        <a class="nav-link" href="#products">Cart
                           <i class="fas fa-shopping-cart"></i>
                         </a>
                     </li>
@@ -352,17 +375,57 @@ body {
         <div class="container">
             <h1 class="display-4">Experience Shopping <br> Redefined</h1>
             <p class="lead">Discover an unparalleled online shopping experience with Commercity, your one-stop ecommerce store based in Prague.</p>
-            <a class="btn btn-prim mybtn1" href="#products"><b>Explore Our Products</b><a>
+            <a class="btn btn-prim mybtn1" href="#products"><b>Shop Now</b><a>
         </div>
-    </section><br><br>
+    </section>
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about"><br><br>
         <div class="container-fluid">
             <h2>About Us</h2>
             <p>At Our Company, we are passionate about providing an exceptional online shopping experience. With a commitment to quality, convenience, and customer satisfaction, we offer a curated selection of premium products to meet your lifestyle needs.</p>
             <p> Our aim is to make every purchase a seamless and enjoyable journey, from discovery to delivery. Discover the perfect blend of convenience and quality with us.</p>
         </div><br><br><br>
-    </section>
+    </section><br>
+    <!-- COMBAK: add icons for the services -->
+    <main id="services"><br>
+  <div class="container-fluid my-5">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2 mb-4">
+        <div class="service-text">
+          <i class="fa fa-bolt"></i>
+          <br>
+          <h3>Fast and Secure Shipping</h3>
+          <p>We offer fast and secure shipping options to ensure your order reaches you in no time.</p>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-1 mb-4">
+        <div class="service-text text-md-start">
+          <i class="fa fa-envelope-open-text"></i>
+          <br>
+          <h3>24/7 Customer Support</h3>
+          <p>Our team is available around the clock to assist you with any issues or concerns you may have.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <div class="service-text">
+          <i class="fa fa-globe"></i>
+          <h3>Wide Range of Products</h3>
+          <p>Explore our extensive selection of products to find exactly what you're looking for.</p>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="service-text">
+          <i class="fa fa-handshake"></i>
+          <h3>Easy Returns and Exchanges</h3>
+          <p>We make returns and exchanges hassle-free so you can shop with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main><br>
     <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
@@ -434,7 +497,7 @@ body {
     <footer class="footer">
       <div class="container">
           <div class="footer-content">
-              <p><b>&copy; 2024 COMMERCITY | All rights reserved.</b></p>
+              <p>&copy; 2024 Commercity | All rights reserved.</p>
           </div>
       </div>
       <div class="social-icons">
