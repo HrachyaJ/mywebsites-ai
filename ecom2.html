@@ -255,6 +255,12 @@
       .btn {
         display: inline-block;
       }
+
+      @media only screen and (max-width: 396px) {
+          .mytxt {
+            font-size: 15px;
+          }
+      }
 </style>
 </head>
 <body>
@@ -325,7 +331,7 @@
       <div class="container mycontainer myfooter">
         <div class="row">
           <div class="col-md-6">
-            <p>&copy; Place2Shop | All Rights Reserved</p>
+            <p class="mytxt">&copy; Place2Shop | All Rights Reserved</p>
           </div>
           <div class="col-md-6 d-none d-md-block">
             <ul class="social-icons">
