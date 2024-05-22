@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place2Shop</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kode+Mono:wght@400..700&family=Noto+Serif+JP&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -48,7 +47,7 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            border-radius: 15px;
         }
 
         .navbar {
@@ -261,6 +260,148 @@
             font-size: 15px;
           }
       }
+
+      #products img {
+        height: 13em;
+        width: 20em;
+      }
+
+      .product-card span {
+        transition: transform 0.3s;
+      }
+
+      .product-card span:hover {
+        transform: scaleX(10deg);
+      }
+
+      .footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  color: #007bff;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.newsletter-form h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.newsletter-form .form-control {
+  display: inline-block;
+  width: auto;
+  margin-right: 10px;
+}
+
+.newsletter-form .btn {
+  display: inline-block;
+}
+
+#contact {
+  padding: 50px 0;
+}
+
+#contact h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+#contact .form-control {
+  border: none;
+  border-bottom: 3px #667db6 solid;
+  border-top: 1px #667db6 solid;
+  border-left: 1px #667db6 solid;
+  border-right: 1px #667db6 solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#contact .form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+#contact textarea.form-control {
+  height: 100px;
+}
+
+.contact-btn {
+  background: linear-gradient(to right, #667db6, #0082c8);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#about {
+  background-color: #f5f5f5;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#about h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#about .text-center {
+  text-align: center;
+}
+
+#about .myhero {
+  background-image: linear-gradient(to right, #667db6, #0082c8);
+  background-size: 100% 300px;
+  background-position: 0% 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
 </style>
 </head>
 <body>
@@ -279,16 +420,22 @@
                      </div>
                  <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-dark" href="#home">HOME</a>
+                        <a class="nav-link text-dark smooth-scroll" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PRODUCTS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item smooth-scroll" href="#products">New Arrivals</a>
+                            <a class="dropdown-item smooth-scroll" href="#products">Sale Items</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#products">PRODUCTS</a>
+                        <a class="nav-link text-dark smooth-scroll" href="#about">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#about">ABOUT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#contact">CONTACT</a>
+                        <a class="nav-link text-dark smooth-scroll" href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -297,36 +444,93 @@
     <div id="home" class="container mycontainer myhero"><br><br>
         <h1>Welcome to our Ecommerce Store!</h1>
         <p>Explore our wide range of products and enjoy a seamless shopping experience.</p><br><br>
-        <a href="#products" class="btn btn-primary mx-auto">Explore Our Products</a><br><br><br><br>
+        <a href="#products" class="btn btn-primary mx-auto smooth-scroll">Explore Our Products</a><br><br><br><br>
     </div><br><br><br>
+    <div id="about" class="container mycontainer myhero">
+      <h1 class="text-center mb-4">About Us</h1>
+      <p class="text-center">Welcome to Place2Shop, your one-stop destination for all your shopping needs. We are a team of passionate individuals who believe in providing the best products and services to our customers.</p>
+      <p class="text-center">Our mission is to make shopping a seamless and enjoyable experience for our customers. We strive to provide high-quality products, excellent customer service, and a user-friendly shopping platform.</p>
+      <p class="text-center">At Place2Shop, we believe in building long-term relationships with our customers. We are committed to providing the best possible experience for our customers and ensuring their satisfaction with every purchase.</p>
+    <br>
+    </div>
+    <br><br><br>
     <div id="products" class="container mycontainer"><br>
       <div class="row">
           <div class="col-md-4">
               <div class="product-card">
                   <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D" alt="Product 1" class="rounded">
-                  <h3>Headphones</h3>
-                  <p>Description of Product 1</p>
-                  <a href="#" class="btn btn-primary">Purchase &raquo;</a>
+                  <h3>Wireless Headphones</h3>
+                  <p>$399</p>
+                  <a href="#" class="btn btn-primary">Purchase <span>&raquo;</span></a>
               </div>
           </div>
           <div class="col-md-4">
               <div class="product-card">
                   <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" alt="Product 2" class="rounded">
-                  <h3>Nike Sneakers</h3>
-                  <p>Description of Product 2</p>
-                  <a href="#" class="btn btn-primary">Purchase &raquo;</a>
+                  <h3>Red Nike Sneaker</h3>
+                  <p>$199</p>
+                  <a href="#" class="btn btn-primary">Purchase <span>&raquo;</span></a>
               </div>
           </div>
           <div class="col-md-4">
               <div class="product-card">
                   <img src="https://plus.unsplash.com/premium_photo-1677541205130-51e60e937318?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" alt="Product 3" class="rounded">
-                  <h3>Lipstick</h3>
-                  <p>Description of Product 3</p>
-                  <a href="#" class="btn btn-primary">Purchase &raquo;</a>
+                  <h3>Red Lipstick</h3>
+                  <p>$9</p>
+                  <a href="#" class="btn btn-primary">Purchase <span>&raquo;</span></a>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="product-card">
+                  <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM4fHxwcm9kdWN0fGVufDB8fDB8fHww" alt="Product 1" class="rounded">
+                  <h3>White Keyboard</h3>
+                  <p>$99</p>
+                  <a href="#" class="btn btn-primary">Purchase <span>&raquo;</span></a>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="product-card">
+                  <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D" alt="Product 2" class="rounded">
+                  <h3>Black Cordless Mouse</h3>
+                  <p>$27</p>
+                  <a href="#" class="btn btn-primary">Purchase <span>&raquo;</span></a>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="product-card">
+                  <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxwcm9kdWN0fGVufDB8fDB8fHww" alt="Product 3" class="rounded">
+                  <h3>Apple MacBook</h3>
+                  <p>$1299</p>
+                  <a href="#" class="btn btn-primary">Purchase <span>&raquo;</span></a>
               </div>
           </div>
       </div>
     </div><br><br>
+      <div id="contact" class="container mycontainer"><br>
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form action="#nowhere" id="contact-form">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter your message" required></textarea>
+              </div><br>
+              <button type="submit" class="btn btn-primary contact-btn mx-auto">Submit</button>
+            </form>
+          </div>
+        </div><br>
+      </div>
+    <br><br>
     <footer class="footer">
       <div class="container mycontainer myfooter">
         <div class="row">
@@ -341,11 +545,90 @@
               <li><a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
             </ul>
           </div>
-        </div>
-      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const searchInput = document.querySelector('.search-input');
+      const productCards = document.querySelectorAll('.product-card');
+
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        productCards.forEach(function(card) {
+          const productName = card.querySelector('h3').textContent.toLowerCase();
+          const productDescription = card.querySelector('p').textContent.toLowerCase();
+
+          if (
+            productName.includes(searchTerm) ||
+            productDescription.includes(searchTerm)
+          ) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+          // Select all links with the class smooth-scroll
+    const smoothLinks = document.querySelectorAll('.smooth-scroll');
+
+    // Add an event listener to each link
+    smoothLinks.forEach(link => {
+      link.addEventListener('click', event => {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Get the href attribute of the link
+        const href = link.getAttribute('href');
+
+        // Get the element with the ID specified in the href
+        const targetElement = document.querySelector(href);
+
+        // Animate the scrolling effect
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form data
+        const formData = new FormData(contactForm);
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
+        });
+
+        // Fetch user's IP address
+        fetch('https://api64.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                const ipAddress = data.ip;
+
+                // Log form data and IP address to the console
+                console.log('Contact Form Data:', formDataObject);
+                console.log('User IP Address:', ipAddress);
+            })
+            .catch(error => console.error('Error fetching IP address:', error));
+    });
+});
+const contactForm = document.getElementById('contact-form');
+
+ contactForm.addEventListener('submit', function(event) {
+   event.preventDefault(); // Prevent default form submission
+
+   // Reset form fields
+   contactForm.reset();
+
+   // Add your form submission logic here
+   console.log('Form submitted successfully!');
+ });
+</script>
 </body>
 </html>
