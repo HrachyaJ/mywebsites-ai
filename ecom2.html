@@ -401,7 +401,10 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-
+.prod {
+  margin: 0;
+  margin-bottom: 10px;
+}
 </style>
 </head>
 <body>
@@ -455,6 +458,7 @@
     </div>
     <br><br><br>
     <div id="products" class="container mycontainer"><br>
+      <h1 class="text-center prod">Products</h1><br>
       <div class="row">
           <div class="col-md-4">
               <div class="product-card">
@@ -592,43 +596,27 @@
         });
       });
     });
-    document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        // Get form data
-        const formData = new FormData(contactForm);
-        const formDataObject = {};
-        formData.forEach((value, key) => {
-            formDataObject[key] = value;
-        });
-
-        // Fetch user's IP address
-        fetch('https://api64.ipify.org?format=json')
-            .then(response => response.json())
-            .then(data => {
-                const ipAddress = data.ip;
-
-                // Log form data and IP address to the console
-                console.log('Contact Form Data:', formDataObject);
-                console.log('User IP Address:', ipAddress);
-            })
-            .catch(error => console.error('Error fetching IP address:', error));
-    });
-});
-const contactForm = document.getElementById('contact-form');
-
- contactForm.addEventListener('submit', function(event) {
-   event.preventDefault(); // Prevent default form submission
-
-   // Reset form fields
-   contactForm.reset();
-
-   // Add your form submission logic here
-   console.log('Form submitted successfully!');
- });
+ function validateForm() {
+     var inputField = document.getElementById('inputField').value;
+     if (inputField === '') {
+         alert('Please fill out the input field');
+         return false;
+     }
+ }
+     function submitForm() {
+         var formData = new FormData(document.getElementById('myForm'));
+         fetch('submit.php', {
+             method: 'POST',
+             body: formData
+         })
+         .then(response => response.text())
+         .then(data => {
+             console.log(data);
+         })
+         .catch(error => {
+             console.error('Error:', error);
+         });
+     }
 </script>
 </body>
 </html>
