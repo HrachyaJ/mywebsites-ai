@@ -238,8 +238,9 @@
       top: 65%;
       left: 4%;
       width: 8em;
+      height: 2em;
       font-size: 1.4em;
-      height: 50px;
+      font-weight: 500;
       color: black;
       border: 1px solid rgb(141, 187, 209);
       border-radius: 5px;
@@ -277,6 +278,7 @@
     @media only screen and (max-width: 835px) {
       .mybtn1 {
         width: 9em;
+        height: 2em;
         font-size: 1.1em;
         top: 70%;
        }
@@ -285,7 +287,7 @@
    @media only screen and (max-width: 600px) {
        .mybtn1 {
         top: 75%;
-        width: 10em;
+        width: 8em;
         font-size: 1em;
         }
       }
@@ -293,9 +295,10 @@
       @media only screen and (max-width: 396px) {
           .mybtn1 {
          top: 76%;
-         width: 150px;
-         height: 45px;
+         width: 130px;
+         height: 1.5em;
          font-size: 1em;
+         padding: 0;
            }
          }
 
@@ -315,7 +318,7 @@
 
       @media only screen and (max-width: 980px) {
          .workplace2 {
-          width: 30em;
+          width: 35em;
           height: 25em;
         }
        }
@@ -391,29 +394,6 @@
         font-size: 16px;
         margin-bottom: 0;
     }
-
-    .carousel-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
-  }
-    .carousel-item img {
-      width: 10em;
-      height: 40em;
-      border: 1px solid #fff;
-      border-radius: 10px;
-    }
-    @media (min-width: 768px) {
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 5%;
-        }
-    }
-    .carousel-indicators {
-      justify-content: center;
-    }
-
     .offer-img {
       width: 100%;
     }
@@ -539,6 +519,18 @@
         .col-lg-4 {
           padding-bottom: 30px;
         }
+
+        #about {
+          padding-top: 300px;
+        }
+
+        .dropdown-toggle i {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
 </style>
 <!-- colors for the website -->
 <!-- rgb(255, 255, 255) white -->
@@ -596,7 +588,7 @@
       <img src="Images/web3.jpg" alt="Workplace" class="workplace">
       <h1 class="text-overlay display-4">Elevate Your Web Presence</h1><br>
       <h1 class="text-overlay2">Harness tailor-made digital solutions to thrive online in Miami's dynamic market.</h1>
-      <button class="btn mybtn1 btn-lg" type="button"><b>Learn More</b><span> &raquo</span></button>
+      <a href="#About" class="btn mybtn1 btn-md">Learn More<span> &raquo</span></a>
     </div>
   <div id="About" class="container-fluid bg-light pt-5 pb-5"><br><br>
     <div class="container">
@@ -612,7 +604,7 @@
           <h5>CodeWise is a leading web software development agency located in Miami. We specialize in creating innovative and tailored solutions to meet our clients' unique needs.</h5><br>
           <h5>With a team of experienced professionals, we are committed to delivering high-quality, cutting-edge technology to drive our clients' success in the digital world.</h5>
           <br>
-          <button class="btn mybtn bt-md">Learn More &raquo</button>
+          <button class="btn mybtn btn-md">Learn More &raquo</button>
         </div>
       </div>
     </div>
@@ -681,42 +673,6 @@
           </div>
         </div>
   </section><br><br>
-  <div class="container"><br>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100 carousel-image" src="Images/carousel1.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100 carousel-image" src="Images/carousel2.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100 carousel-image" src="Images/carousel3.jpg" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100 carousel-image" src="Images/carousel6.jpg" alt="Fourth slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100 carousel-image" src="Images/carousel5.jpg" alt="Fifth slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-  </div><br><br>
   <div class="container-fluid bg-light">
     <div class="offertable"><br>
         <h2 class="myfont">Web Software Development Agency</h2><br>
@@ -838,22 +794,14 @@
     window.addEventListener('load', function() {
       document.querySelector('.loading').style.display = 'none';
     });
-    // Get the dropdown toggle element
-    var dropdownToggle = document.getElementById('services-dropdown');
-    // Listen for the dropdown menu being shown
-    dropdownToggle.addEventListener('click', function() {
-      var icon = dropdownToggle.querySelector('i');
+    // Function to animate the dropdown icon
+  function animateIcon() {
+      let icon = document.querySelector('.dropdown-toggle i');
       icon.classList.toggle('rotate-180');
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+  }
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-    });
+  // Event listener to trigger animation on dropdown click
+  document.querySelector('.dropdown-toggle').addEventListener('click', animateIcon);
   </script>
 </body>
 </html>
