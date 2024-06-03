@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      align-items: center;
+      background: #000;
+    }
+    button {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      border: none;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .orange-btn {
+      background-color: rgb(254, 160, 10);
+    }
+    .clear {
+      font-size: 17px;
+    }
+    input {
+      background: black;
+      border: black;
+      color: white;
+      font-size: 35px;
+    }
+  </style>
+  <body>
+    <input id="calculation" type="text" value="" readonly>
+    <p>
+      <button onclick="performCalculation('1')">1</button>
+      <button onclick="performCalculation('2')">2</button>
+      <button onclick="performCalculation('3')">3</button>
+      <button class="orange-btn" onclick="performCalculation('+')">+</button>
+    </p>
+    <p>
+      <button onclick="performCalculation('4')">4</button>
+      <button onclick="performCalculation('5')">5</button>
+      <button onclick="performCalculation('6')">6</button>
+      <button class="orange-btn" onclick="performCalculation('-')">-</button>
+    </p>
+    <p>
+      <button onclick="performCalculation('7')">7</button>
+      <button onclick="performCalculation('8')">8</button>
+      <button onclick="performCalculation('9')">9</button>
+      <button class="orange-btn" onclick="performCalculation('*')">*</button>
+    </p>
+    <p>
+      <button onclick="performCalculation('0')">0</button>
+      <button onclick="performCalculation('.')">.</button>
+      <button onclick="performCalculation('=')">=</button>
+      <button class="orange-btn" onclick="performCalculation('/')">/</button>
+    </p>
+    <button class="clear" onclick="clearCalculation()">Clear</button>
+  </body>
+  <script>
+    let calculation = '';
+    let calcDisplay = document.getElementById('calculation');
+
+    function performCalculation(value) {
+      if (value === '=') {
+        try {
+          calculation = eval(calculation);
+          calcDisplay.value = calculation;
+        } catch (error) {
+          calcDisplay.value = 'Error';
+        }
+      } else {
+        calculation += value;
+        calcDisplay.value = calculation;
+      }
+    }
+
+    function clearCalculation() {
+      calculation = '';
+      calcDisplay.value = '';
+    }
+  </script>
+</html>
+<!-- My code -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.orange-btn {
+  background-color: rgb(254, 160, 10);
+}
+
+.clear {
+  font-size: 17px;
+}
+  </style>
+  <body>
+   <p>
+    <button onclick="
+      calculation += '1';
+      console.log(calculation);
+    ">1</button>
+    <button onclick="
+      calculation += '2';
+      console.log(calculation);
+    ">2</button>
+    <button onclick="
+      calculation += '3';
+      console.log(calculation);
+    ">3</button>
+    <button class="orange-btn" onclick="
+      calculation += ' + ';
+    ">+</button>
+    </p>
+    <p>
+     <button onclick="
+       calculation += '4';
+       console.log(calculation);
+     ">4</button>
+     <button onclick="
+       calculation += '5';
+       console.log(calculation);
+     ">5</button>
+     <button onclick="
+       calculation += '6';
+       console.log(calculation);
+     ">6</button>
+     <button class="orange-btn" onclick="
+       calculation += ' - ';
+     ">-</button>
+    </p>
+    <p>
+     <button onclick="
+       calculation += '7';
+       console.log(calculation);
+     ">7</button>
+     <button onclick="
+       calculation += '8';
+       console.log(calculation);
+     ">8</button>
+     <button onclick="
+       calculation += '9';
+       console.log(calculation);
+     ">9</button>
+     <button class="orange-btn" onclick="
+       calculation += ' * ';
+     ">*</button>
+    </p>
+    <p>
+    <button onclick="
+      calculation += '0';
+      console.log(calculation);
+    ">0</button>
+    <button onclick="
+      calculation += '.';
+    ">.</button>
+    <button onclick="
+      eval(calculation)
+      calculation = eval(calculation);
+      console.log(calculation);
+    ">=</button>
+    <button class="orange-btn" onclick="
+      calculation += '/ ';
+    ">/</button>
+  </p>
+  <button class="clear" onclick="
+    calculation = '';
+    console.log('Cleared');
+  ">Clear</button>
+  </body>
+  <script>
+    let calculation = '';
+  </script>
+</html> -->
