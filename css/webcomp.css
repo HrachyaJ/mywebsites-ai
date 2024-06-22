@@ -1,0 +1,5 @@
+$myBackground: red
+
+body {
+  background: $myBackground;
+}

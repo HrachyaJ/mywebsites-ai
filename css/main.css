@@ -1,0 +1,110 @@
+body {
+   text-align: center;
+   background-color: #001933;
+   color: white;
+   margin:0;
+   overflow-x: hidden;
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+   }
+  }
+.footer {
+   width: 100%;
+   font-style: italic;
+   font-family: serif;
+   background-color: #FF8000;
+   border:1px inset white;
+   border-radius: 5px;
+   text-align: left;
+   padding: 10px;
+   padding-left: 20px;
+}
+
+input {
+    padding: 10px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom:3px inset #FF8000;
+    border-radius: 5px;
+    background-color: #00183d;
+    opacity: 0.7;
+    color: white;
+  }
+
+  input:hover {
+    opacity: 1.0;
+  }
+
+  .button {
+    background-color:  #00183d;
+    border-bottom: none;
+    cursor: pointer;
+    box-shadow: 0 3px #FF8000;
+  }
+
+  .button:active {
+    box-shadow: 0 1px #FF8000;
+    transform: translateY(4px);
+  }
+
+  .signup {
+    padding: 90px;
+    font-size: 15px;
+  }
+
+  .menubar {
+    overflow: hidden;
+    background-color: #FF8000;
+    border:1px inset white;
+    border-radius: 5px;
+  }
+
+  .menubar a {
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px solid #FF8000;
+    border-radius: 5px;
+    font-family: georgia;
+  }
+
+  .menubar a:hover {
+    opacity: 0.7;
+    color: white;
+  }
+
+  h1 {
+    padding-top: 70px;
+    padding-bottom: 25px;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    opacity: 0.8;
+  }
+
+  .header {
+    text-transform: capitalize;
+    padding: 50px;
+    line-height: 50px;
+  }
+
+  .main {
+    text-align: left;
+    font-family: serif;
+    font-size: 35px;
+    position: absolute;
+    top: 100%;
+    margin: 10px 30px 0;
+  }

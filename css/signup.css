@@ -1,0 +1,68 @@
+body {
+  overflow: hidden;
+  background: #d72424;
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  width: 550px;
+  box-shadow: 0 0 20px #000;
+}
+
+div {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 46%;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+input, button {
+  padding: 7px 15px;
+  border:1px inset #fff;
+  border-radius: 15px;
+}
+
+input[type=password]{
+  width: 56%;
+}
+
+input[type=Email]{
+  width: 56%;
+}
+
+input[type=date]{
+  width: 56%;
+}
+
+button {
+  font-weight: bold;
+  transition: 0.5s background,0.5s color;
+  cursor: pointer;
+}
+
+input:hover {
+  border:1px outset #fff;
+}
+
+button:hover {
+  background:#d72424;
+  color:#fff;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+}
+
+.ckbx {
+  cursor: pointer;
+}

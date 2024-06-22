@@ -1,0 +1,13 @@
+*{
+ background-color: #066766;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
