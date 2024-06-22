@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Place2Purchase | Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Images/P logo.png">
+  </head>
+  <body>
+    <form id="myForm" action="">
+      <div class="signup">
+        <h1>Sign up for new account</h1><br>
+        <input id="name" type="text" name="firstname" placeholder="First Name" required>
+        <input type="text" name="lastname" placeholder="Last Name" required><br><br>
+        <input type="date" name="date" value="dd.mm.yyyy" required><br><br>
+        <input id="email" type="email" name="Email" placeholder="Example@gmail.com" required><br><br>
+        <input id="password" type="password" name="password" placeholder="Password" maxlength="15" required><br><br>
+        <input id="confirmPassword" type="password" name="password" placeholder="Password" maxlength="15" required><br><br>
+        <label class="ckbx"><input type="checkbox">Follow to the newsletter</label><br><br>
+        <button type="submit" name="button">Sign Up</button>
+      </div>
+    </form>
+    <img src="Images/phone-app.png" alt="Phone app">
+    <script>
+    // Get the form and input fields
+var form = document.getElementById("myForm");
+var name = document.getElementById("name");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+var confirmPassword = document.getElementById("confirmPassword");
+
+// Add event listener to the submit button
+form.addEventListener("submit", function(event) {
+// Prevent the default form submission behavior
+event.preventDefault();
+
+// Validate the form fields
+if (!validateForm()) {
+  // If the form is not valid, prevent the submission
+  event.preventDefault();
+} else {
+  // If the form is valid, submit the form
+  form.submit();
+}
+});
+
+// Function to validate the form fields
+function validateForm() {
+// Check if the name field is empty
+if (name.value === "") {
+  alert("Please enter your name");
+  name.focus();
+  return false;
+}
+
+// Check if the email field is empty
+if (email.value === "") {
+  alert("Please enter your email");
+  email.focus();
+  return false;
+}
+
+// Check if the password field is empty
+if (password.value === "") {
+  alert("Please enter your password");
+  password.focus();
+  return false;
+}
+
+// Check if the confirm password field is empty
+if (confirmPassword.value === "") {
+  alert("Please confirm your password");
+  confirmPassword.focus();
+  return false;
+}
+
+// Check if the password and confirm password fields match
+if (password.value !== confirmPassword.value) {
+  alert("Passwords do not match");
+  password.focus();
+  return false;
+}
+
+// If all fields are valid, return true
+return true;
+}
+
+    </script>
+  </body>
+</html>
