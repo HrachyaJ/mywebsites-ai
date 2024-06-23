@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Cinzel:wght@400..900&family=Kode+Mono:wght@400..700&family=Noto+Serif+JP&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 body {
-  font-family: Arial, sans-serif;
+  font-family: , sans-serif;
   background-color: #f5f5f5;
 }
 
@@ -66,19 +68,15 @@ body {
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  background-color: #333;
   color: #fff;
   cursor: pointer;
 }
 
-.products button:hover {
-  background-color: #555;
-  color: #fff;
+.products button:active {
+  border: 1px solid #000;
+  color: #000;
 }
 
-.products button:active {
-  background-image: linear-gradient(to bottom, #333333, #666666);
-}
 
 .about p {
   font-size: 16px;
@@ -183,7 +181,7 @@ body {
 }
 
 .btn-prim:active {
-  background:
+  background: #fff;
 }
 
 .mybtn1 {
@@ -259,6 +257,9 @@ body {
   justify-content: flex-end;
   font-size: 24px;
   color: #000; /* Facebook blue */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .social-icon:hover {
@@ -274,12 +275,13 @@ body {
   color: #3B5998; /* Facebook hover blue */
 }
 
-.social-icon .fa-twitter {
+.social-icon .ri-twitter-x-line {
   color: #000; /* Twitter blue */
   transition: color 0.3s;
+  text-decoration: none;
 }
 
-.social-icon .fa-twitter:hover {
+.social-icon .ri-twitter-x-line:hover {
   color: #1DA1F2; /* Twitter blue */
 }
 
@@ -305,6 +307,7 @@ body {
 
 .social-icons {
   display: flex;
+  text-decoration: none;
 }
 
 .social-icon {
@@ -333,6 +336,14 @@ body {
   .service-text {
     text-align: center !important;
   }
+}
+
+.social-icons .ri-twitter-x-line {
+  text-decoration: none;
+}
+
+.social-icons a {
+  text-decoration: none;
 }
 
 .fa {
@@ -374,19 +385,19 @@ body {
     <section class="hero text-dark">
         <div class="container">
             <h1 class="display-4">Experience Shopping <br> Redefined</h1>
-            <p class="lead">Discover an unparalleled online shopping experience with Commercity, your one-stop ecommerce store based in Prague.</p>
+            <p class="lead">Discover an unparalleled online shopping experience with Commercity, your one-stop ecommerce store.</p>
             <a class="btn btn-prim mybtn1" href="#products"><b>Shop Now</b><a>
         </div>
     </section>
     <!-- About Section -->
     <section id="about" class="about"><br><br>
         <div class="container-fluid">
-            <h2>About Us</h2>
-            <p>At Our Company, we are passionate about providing an exceptional online shopping experience. With a commitment to quality, convenience, and customer satisfaction, we offer a curated selection of premium products to meet your lifestyle needs.</p>
-            <p> Our aim is to make every purchase a seamless and enjoyable journey, from discovery to delivery. Discover the perfect blend of convenience and quality with us.</p>
-        </div><br><br><br>
-    </section><br>
-    <!-- COMBAK: add icons for the services -->
+            <h2 class="text-center">About Us</h2>
+            <p class="text-center">At Our Company, we are passionate about providing an exceptional online shopping experience. With a commitment to quality, convenience, and customer satisfaction, we offer a curated selection of premium products to meet your lifestyle needs.</p>
+            <p class="text-center"> Our aim is to make every purchase a seamless and enjoyable journey, from discovery to delivery. Discover the perfect blend of convenience and quality with us.</p>
+        </div><br>
+    </section>
+    <!-- Service Section -->
     <main id="services"><br>
   <div class="container-fluid my-5">
     <h2 class="text-center mb-5">Our Services</h2>
@@ -394,17 +405,17 @@ body {
       <div class="col-md-6 order-md-2 mb-4">
         <div class="service-text">
           <i class="fa fa-bolt"></i>
-          <br>
+          <br><br>
           <h3>Fast and Secure Shipping</h3>
-          <p>We offer fast and secure shipping options to ensure your order reaches you in no time.</p>
+          <p>We offer fast and secure shipping options to ensure your order reaches you in no time. You can track your order through our order tracking page, which is accessible by logging into your account and clicking on "Order Tracking."</p>
         </div>
       </div>
       <div class="col-md-6 order-md-1 mb-4">
         <div class="service-text text-md-start">
           <i class="fa fa-envelope-open-text"></i>
-          <br>
+          <br><br>
           <h3>24/7 Customer Support</h3>
-          <p>Our team is available around the clock to assist you with any issues or concerns you may have.</p>
+          <p>Our team is available around the clock to assist you with any issues or concerns you may have. You can reach us through our contact form, email at support@commercity.com, or by calling us at 1-800-123-4567.</p>
         </div>
       </div>
     </div>
@@ -412,15 +423,17 @@ body {
       <div class="col-md-6 mb-4">
         <div class="service-text">
           <i class="fa fa-globe"></i>
+          <br><br>
           <h3>Wide Range of Products</h3>
-          <p>Explore our extensive selection of products to find exactly what you're looking for.</p>
+          <p>Explore our extensive selection of products to find exactly what you're looking for.  Each product includes detailed descriptions, images, and reviews to help you make informed purchasing decisions.</p>
         </div>
       </div>
       <div class="col-md-6 mb-4">
         <div class="service-text">
           <i class="fa fa-handshake"></i>
+          <br><br>
           <h3>Easy Returns and Exchanges</h3>
-          <p>We make returns and exchanges hassle-free so you can shop with confidence.</p>
+          <p>We make returns and exchanges hassle-free so you can shop with confidence.Returns and exchanges must be initiated within 30 days of delivery. Items must be in their original packaging and in good condition.</p>
         </div>
       </div>
     </div>
@@ -429,45 +442,51 @@ body {
     <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
-            <h2 class="text-center display-6">Our Products</h2><br>
+            <h2 class="text-center">Our Products</h2><br>
             <div class="row">
                 <div class="col-md-4">
+                  <img src="https://images.unsplash.com/photo-1585995603413-eb35b5f4a50b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UG93ZXIlMjBCYW5rfGVufDB8fDB8fHww" alt="Portable Power Bank">
                     <h5>Portable Power Bank</h5>
                     <p>A compact power bank that can charge multiple devices on the go.</p>
                     <p>$99.9</p>
-                    <button class="btn">Add to Cart</button>
+                    <button id="" class="btn btn-prim add2Cart">Add to Cart</button>
                 </div>
                 <div class="col-md-4">
+                  <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2lyZWxlc3MlMjBlYXJidWRzfGVufDB8fDB8fHww" alt="Wireless Earbuds">
                     <h5>Wireless Earbuds</h5>
                     <p>High-quality earbuds with long battery life and sleek design.</p>
                     <p>$199.9</p>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn btn-prim add2Cart">Add to Cart</button>
                 </div>
                 <div class="col-md-4">
+                  <img src="https://images.unsplash.com/photo-1523252012848-c22188792c27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SGFuZG1hZGUlMjBKZXdlbHJ5fGVufDB8fDB8fHww" alt="Handmade Jewelry">
                     <h5>Handmade Jewelry</h5>
                     <p>Unique, handmade jewelry pieces with intricate designs and high-quality materials.</p>
                     <p>$299.9</p>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn btn-prim add2Cart">Add to Cart</button>
                 </div>
             </div><br>
             <div class="row">
                 <div class="col-md-4">
+                  <img src="https://images.unsplash.com/photo-1593369196682-6d8ec9ff3ae0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Q29mZmVlJTIwTWFrZXJ8ZW58MHx8MHx8fDA%3D" alt="Coffee Maker">
                     <h5>Coffee Maker</h5>
                     <p>A high-end coffee maker with advanced features like temperature control and customizable brewing.</p>
                     <p>$449.9</p>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn btn-prim add2Cart">Add to Cart</button>
                 </div>
                 <div class="col-md-4">
+                  <img src="https://images.unsplash.com/photo-1619140099965-06d74aaf51fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U21hcnQlMjBUaGVybW9zdGF0fGVufDB8fDB8fHww" alt="Smart Thermostat">
                     <h5>Smart Thermostat</h5>
                     <p> A smart thermostat that learns your schedule and preferences to optimize heating and cooling with your phone or your voice.</p>
                     <p>$599.9</p>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn btn-prim add2Cart">Add to Cart</button>
                 </div>
                 <div class="col-md-4">
+                  <img src="https://images.unsplash.com/photo-1636092226936-678054683b69?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fHNtYXJ0JTIwbGlnaHRpbmd8ZW58MHx8MHx8fDA%3D" alt="Smart Lighting">
                     <h5>Smart Lighting</h5>
                     <p>A smart lighting system that can be controlled remotely and adjusts brightness based on the time of day.</p>
                     <p>$999.9</p>
-                    <button class="btn">Add to Cart</button>
+                    <button class="btn btn-prim add2Cart">Add to Cart</button>
                 </div>
             </div>
         </div><br><br>
@@ -502,7 +521,7 @@ body {
       </div>
       <div class="social-icons">
         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="ri ri-twitter-x-line"></i></a>
         <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
       </div>
   </footer>
