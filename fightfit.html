@@ -1,149 +1,367 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="css/responsive-navbar.css">
-      <link rel="shortcut icon" href="Images/fightfit-favicon-tp.png">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-      <title>FightFit | Home</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <nav class="nav container">
-            <a href="#" class="nav__logo"><img class="myLogo" src="Images/fightfit-logo.png" alt="Logo"></a>
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li class="nav__item">
-                     <a href="#home" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Home</span>
-                     </a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#about-us" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>About Us</span>
-                     </a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#services" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Services</span>
-                     </a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#faq" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>FAQ</span>
-                     </a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#contact" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Contact</span>
-                     </a>
-                  </li>
-               </ul><br>
-               <!-- Close button -->
-               <div class="nav__close" id="nav-close">
-                  <i class="ri-close-large-line"></i>
-               </div>
-               <div class="nav__social">
-                  <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
-                     <i class="ri-instagram-line"></i>
-                  </a>
-                  <a href="https://github.com/" target="_blank" class="nav__social-link">
-                     <i class="ri-facebook-fill"></i>
-                  </a>
-                  <a href="https://dribbble.com/" target="_blank" class="nav__social-link">
-                     <i class="ri-twitter-x-fill"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/" target="_blank" class="nav__social-link">
-                     <i class="ri-youtube-fill"></i>
-                  </a>
-               </div>
-            </div>
-            <!-- Toggle button -->
-            <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line"></i>
-            </div>
-         </nav>
-      </header>
-      <!--==================== MAIN ====================-->
-      <main>
-        <section id="home" class="hero">
-          <div class="hero-content">
-            <h1>Unleash Your Inner Fighter</h1><br>
-            <p>Tired of feeling out of shape and lacking confidence? Our boxing and MMA classes will transform you into a lean, mean, fighting machine. Get the body and mindset you've always wanted.</p>
-            <a href="#membership" class="cta-button">Join Now</a><br>
-          </div>
-          <div class="hero-image">
-            <img src="https://plus.unsplash.com/premium_photo-1681400614910-2e80fa375521?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Boxing and MMA Training">
-          </div>
-        </section>
-        <section id="about-us" class="about-us">
-          <div class="about-us-img">
-            <img src="https://images.unsplash.com/photo-1716307046875-4c4ba2f43cab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Boxing and MMA Training">
-          </div><br>
-          <div class="about-us-content">
-            <h1>About Us</h1><br>
-            <p>At FightFit, we are more than just a place to work out - we are a community of passionate individuals dedicated to helping you reach your full potential. Our gym has been at the forefront of the boxing and MMA scene, providing top-notch training and a supportive environment for athletes of all levels.</p><br>
-            <p>Our unique approach combines the best of both worlds - the discipline and technique of traditional martial arts with the high-intensity training of modern fitness. Under the guidance of our experienced coaching team, you'll learn the fundamentals of boxing and MMA while also improving your overall fitness, strength, and endurance.</p><br>
-            <a href="#" class="cta-button">More Info</a><br>
-          </div>
-        </section>
-        <section id="services" class="">
-
-        </section>
-        <section id="faq" class="">
-
-        </section>
-        <section id="contact" class="">
-
-        </section>
-        <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-info">
-      <a href="#" class="nav__logo">
-        <img class="myLogo myFooterLogo" src="Images/fightfit-logo.png" alt="Logo">
-      </a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="css/responsive-navbar.css">
+  <link rel="shortcut icon" href="Images/fightfit-favicon-tp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>FightFit | Home</title>
+</head>
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo"><img class="myLogo" src="Images/fightfit-logo.png" alt="Logo"></a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">
+              <i class="ri-arrow-right-up-line"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#about-us" class="nav__link">
+              <i class="ri-arrow-right-up-line"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">
+              <i class="ri-arrow-right-up-line"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#faq" class="nav__link">
+              <i class="ri-arrow-right-up-line"></i>
+              <span>FAQ</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">
+              <i class="ri-arrow-right-up-line"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul><br>
+        <!-- Close button -->
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-large-line"></i>
+        </div>
+        <div class="nav__social">
+          <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" class="nav__social-link">
+            <i class="ri-facebook-fill"></i>
+          </a>
+          <a href="https://www.twitter.com/" target="_blank" class="nav__social-link">
+            <i class="ri-twitter-x-fill"></i>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" class="nav__social-link">
+            <i class="ri-youtube-fill"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Toggle button -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+  <!--==================== MAIN ====================-->
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Unleash Your Inner Fighter</h1><br>
+        <p>Tired of feeling out of shape and lacking confidence? Our Boxing and MMA classes will transform you into a lean, mean, fighting machine. Get the body and mindset you've always wanted.</p>
+        <a href="#membership" class="cta-button">Join Now</a><br>
+      </div>
+      <div class="hero-image">
+        <img src="https://plus.unsplash.com/premium_photo-1681400614910-2e80fa375521?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Boxing and MMA Training">
+      </div>
+    </section>
+    <section id="about-us" class="about-us">
+      <div class="about-us-img">
+        <img src="https://images.unsplash.com/photo-1716307046875-4c4ba2f43cab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Boxing and MMA Training">
+      </div><br>
+      <div class="about-us-content">
+        <h1>About Us</h1><br>
+        <p>At FightFit, we are more than just a place to work out - we are a community of passionate individuals dedicated to helping you reach your full potential. Our gym has been at the forefront of the Boxing and MMA scene, providing top-notch training and a supportive environment for athletes of all levels.</p><br>
+        <p>Our unique approach combines the best of both worlds - the discipline and technique of traditional martial arts with the high-intensity training of modern fitness. Under the guidance of our experienced coaching team, you'll learn the fundamentals of Boxing and MMA while also improving your overall fitness, strength, and endurance.</p><br>
+        <a href="#" class="cta-button">More Info</a><br>
+      </div>
+    </section>
+    <section id="services" class="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-card-inner">
+        <div class="service-card-front">
+          <img src="https://media.istockphoto.com/id/481686206/photo/boxing-power.webp?b=1&s=170667a&w=0&k=20&c=ConI9LknAhvA7RXAiKq8UoQmBahRxGb245lZhiZo-Oc=" alt="Boxing Training">
+          <h3>Boxing Training</h3>
+        </div>
+        <div class="service-card-back">
+          <p>Learn the fundamentals of Boxing, including footwork, punches, and defensive techniques. Our experienced coaches will help you develop power, speed, and confidence in the ring.</p>
+        </div>
+      </div>
     </div>
-    <div class="footer-social">
-      <h3 class="footer-title">Follow Us</h3>
-      <div class="nav__social">
-        <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
-          <i class="ri ri-instagram-line"></i>
-        </a>
-        <a href="https://www.facebook.com/" target="_blank" class="nav__social-link">
-          <i class="ri ri-facebook-fill"></i>
-        </a>
-        <a href="https://www.x.com/" target="_blank" class="nav__social-link">
-          <i class="ri ri-twitter-x-fill"></i>
-        </a>
-        <a href="https://www.youtube.com/" target="_blank" class="nav__social-link">
-          <i class="ri ri-youtube-fill"></i>
-        </a>
+
+    <div class="service-card">
+      <div class="service-card-inner">
+        <div class="service-card-front">
+          <img src="https://images.unsplash.com/photo-1601588462060-470011bd9a18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGJveGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="KickBoxing Training">
+          <h3>KickBoxing Training</h3>
+        </div>
+        <div class="service-card-back">
+          <p>Combine the striking techniques of Boxing with the powerful kicks of Muay Thai. KickBoxing classes will help you build endurance, coordination, and explosive power.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-inner">
+        <div class="service-card-front">
+          <img src="https://images.unsplash.com/photo-1615117950029-db3cf44bdefa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW1hJTIwdHJhaW5pbmd8ZW58MHx8MHx8fDA%3D" alt="MMA Training">
+          <h3>MMA Training</h3>
+        </div>
+        <div class="service-card-back">
+          <p>Experience the ultimate martial arts workout with our MMA training classes. Learn the techniques of boxing, wrestling, and Brazilian jiu-jitsu to improve your overall fitness and self-defense skills.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-inner">
+        <div class="service-card-front">
+          <img src="https://plus.unsplash.com/premium_photo-1664304745508-a72fd8b24e4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d3Jlc3RsaW5nfGVufDB8fDB8fHww" alt="Wrestling Training">
+          <h3>Wrestling Training</h3>
+        </div>
+        <div class="service-card-back">
+          <p>Develop the skills and techniques of Olympic-style wrestling, including takedowns, pins, and escapes. Wrestling classes will improve your strength, balance, and ability to control your opponent.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-inner">
+        <div class="service-card-front">
+          <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fHN0cmVuZ3RoJTIwdHJhaW5pbmd8ZW58MHx8MHx8fDA%3D" alt="Strength and Conditioning">
+          <h3>Strength and Conditioning</h3>
+        </div>
+        <div class="service-card-back">
+          <p>Enhance your overall fitness with our strength and conditioning classes. Using a variety of equipment and exercises, we'll help you build muscle, increase endurance, and improve your athletic performance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-inner">
+        <div class="service-card-front">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zml0bmVzcyUyMHRyYWluaW5nfGVufDB8fDB8fHww" alt="Fitness Classes">
+          <h3>Fitness Classes</h3>
+        </div>
+        <div class="service-card-back">
+          <p>Join our high-energy fitness classes for a fun and effective workout. From HIIT to yoga, we offer a variety of classes to suit all fitness levels and help you achieve your goals.</p>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+  <a href="#membership" class="cta-button mybtn">Join Now</a><br>
+  <section id="membership" class="pricing">
+  <h2 class="section-title">Pricing</h2>
+  <div class="pricing-container">
+    <div class="pricing-card">
+      <div class="pricing-card-inner">
+        <div class="pricing-card-front">
+          <img src="https://plus.unsplash.com/premium_photo-1664908283434-7978e7a42f40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Basic Membership">
+          <h3>Basic Membership</h3>
+          <p class="price">$49/month</p>
+        </div>
+        <div class="pricing-card-back">
+          <h3>Basic Membership</h3>
+          <ul class="features">
+            <li><i class="ri-check-line"></i> Access to boxing and MMA classes</li>
+            <li><i class="ri-check-line"></i> 2 classes per week</li>
+            <li><i class="ri-check-line"></i> Free gloves and wraps</li>
+          </ul>
+          <a href="#" class="cta-button">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-card-inner">
+        <div class="pricing-card-front">
+          <img src="https://images.unsplash.com/photo-1716307035615-1c6465a32ef2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Premium Membership">
+          <h3>Premium Membership</h3>
+          <p class="price">$79/month</p>
+        </div>
+        <div class="pricing-card-back">
+          <h3>Premium Membership</h3>
+          <ul class="features">
+            <li><i class="ri-check-line"></i> Access to boxing and MMA classes</li>
+            <li><i class="ri-check-line"></i> Unlimited classes per week</li>
+            <li><i class="ri-check-line"></i> Free gloves, wraps, and hand wraps</li>
+            <li><i class="ri-check-line"></i> Discounts on merchandise</li>
+          </ul>
+          <a href="#" class="cta-button">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-card-inner">
+        <div class="pricing-card-front">
+          <img src="https://images.unsplash.com/photo-1716307043003-dbe6a5cc496e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Ym94aW5nJTIwZ3ltfGVufDB8fDB8fHww" alt="Elite Membership">
+          <h3>Elite Membership</h3>
+          <p class="price">$99/month</p>
+        </div>
+        <div class="pricing-card-back">
+          <h3>Elite Membership</h3>
+          <ul class="features">
+            <li><i class="ri-check-line"></i> Access to boxing and MMA classes</li>
+            <li><i class="ri-check-line"></i> Unlimited classes per week</li>
+            <li><i class="ri-check-line"></i> Free gloves, wraps, hand wraps, and mouthguard</li>
+            <li><i class="ri-check-line"></i> Discounts on merchandise and private training</li>
+            <li><i class="ri-check-line"></i> Priority access to events and seminars</li>
+          </ul>
+          <a href="#" class="cta-button">Join Now</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2024 FightFit. All rights reserved.</p>
-    <ul class="footer-links-bottom">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Service</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
+</section>
+</section>
+<section id="faq" class="faq">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="faq-container">
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>What are the benefits of Boxing and MMA training?</h3>
+    <i class="ri-add-line"></i>
   </div>
-</footer>
-      </main>
-      <!--=============== MAIN JS ===============-->
-      <script src="javascript/responsive-navbar.js"></script>
-   </body>
+  <div class="faq-answer">
+    <p>Boxing and MMA training offer a wide range of benefits, including improved cardiovascular fitness, increased strength and muscle tone, enhanced coordination and balance, and better self-confidence and discipline.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>Do I need prior experience to join your classes?</h3>
+    <i class="ri-add-line"></i>
+  </div>
+  <div class="faq-answer">
+    <p>No, our classes are designed for all skill levels, from complete beginners to experienced martial artists. Our expert coaches will guide you through the fundamentals and help you progress at your own pace.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>What equipment do I need to bring to the gym?</h3>
+    <i class="ri-add-line"></i>
+  </div>
+  <div class="faq-answer">
+    <p>For our boxing and MMA classes, we recommend bringing comfortable workout clothes, a water bottle, and a towel. We provide all the necessary equipment, such as gloves, wraps, and mouthguards, for you to use during the sessions.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>Do you offer any discounts or membership packages?</h3>
+    <i class="ri-add-line"></i>
+  </div>
+  <div class="faq-answer">
+    <p>Yes, we offer a variety of membership packages to suit different budgets and needs. You can check our pricing section for more details on the available options and any discounts or promotions we currently have.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <h3>Is there personal training?</h3>
+    <i class="ri-add-line"></i>
+  </div>
+  <div class="faq-answer">
+    <p>Yes, we offer personal training sessions. Our trainers develop a plan that fits your goals and level.</p>
+  </div>
+</div>
+
+</div>
+</section>
+<section id="contact" class="contact">
+<h2 class="section-title">Get in Touch</h2>
+<div class="contact-container">
+<div class="contact-info">
+  <h3>Contact Information</h3>
+  <ul>
+    <li><i class="ri-map-pin-line"></i> 123 Main St, Anytown USA</li>
+    <li><i class="ri-phone-line"></i> (123) 456-7890</li>
+    <li><i class="ri-mail-line"></i> info@fightfit.com</li>
+  </ul>
+</div>
+<div class="contact-form">
+  <h3>Send Us a Message</h3>
+  <form id="contact-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input placeholder="Your Name..." type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input placeholder="Your Email..." type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea placeholder="Your message..." id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="cta-button">Send Message</button>
+  </form>
+</div>
+</div>
+</section>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="#" class="nav__logo">
+            <img class="myLogo myFooterLogo" src="Images/fightfit-logo.png" alt="Logo">
+          </a>
+        </div>
+        <div class="footer-social">
+          <h3 class="footer-title">Follow Us</h3>
+          <div class="nav__social">
+            <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
+              <i class="ri ri-instagram-line"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" class="nav__social-link">
+              <i class="ri ri-facebook-fill"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="nav__social-link">
+              <i class="ri ri-twitter-x-fill"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" class="nav__social-link">
+              <i class="ri ri-youtube-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 FightFit. All rights reserved.</p>
+        <ul class="footer-links-bottom">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+  <!--=============== MAIN JS ===============-->
+  <script src="javascript/responsive-navbar.js"></script>
+</body>
 </html>
