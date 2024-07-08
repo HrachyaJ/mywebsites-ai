@@ -1,11 +1,5 @@
-const todoList = [{
-  name: 'make money',
-  dueDate: '2024-07-05'
-}, {
-  name: 'buy a car',
-  dueDate: '2024-07-05'
-}];
-
+// Load todos from localStorage on page load
+let todoList = JSON.parse(localStorage.getItem('todoList')) || [];
 renderTodoList();
 
 function renderTodoList() {
@@ -18,8 +12,7 @@ function renderTodoList() {
       <div class="todo-item">${name}</div>
       <div class="todo-item">${dueDate}</div>
       <button onclick="
-        todoList.splice(${i}, 1);
-        renderTodoList();
+        deleteTodo(${i});
       " class="delete-button">Delete</button>
     `;
     todoListHTML += html;
@@ -42,10 +35,22 @@ function addTodo() {
       dueDate
     });
 
+    // Save the updated todoList to localStorage
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+
     inputElement.value = '';
 
     renderTodoList();
   }
+}
+
+function deleteTodo(index) {
+  todoList.splice(index, 1);
+
+  // Save the updated todoList to localStorage
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+
+  renderTodoList();
 }
 
 // Add event listener for the 'keydown' event on the name input field
