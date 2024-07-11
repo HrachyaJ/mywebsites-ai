@@ -111,6 +111,23 @@ img{
   border-radius: .5rem;
 }
 
+@media screen and (max-width: 425px) {
+  .home__title {
+    margin-top: 160px;
+    font-size: 20px;
+  }
+
+  .home {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home__title {
+    margin-top: 80px;
+  }
+}
+
 /*========== CLASS CSS ==========*/
 .section{
   padding: 4rem 0 2rem;
@@ -233,7 +250,7 @@ img{
   background: rgba(6,156,84,.5);
   border-radius: .4rem;
   z-index: var(--z-tooltip);
-  transition: .3s;
+  transition: .2,5s;
   visibility: hidden;
 }
 
@@ -258,11 +275,15 @@ img{
   align-content: center;
 }
 
+@media screen and (max-width: 1440px) {
+  .home__title {
+    font-size: 55px;
+  }
+}
+
 .home__title{
-  font-size: 55px;
   color: var(--first-color);
   margin-bottom: var(--mb-1);
-  margin-top: 50px;
 }
 
 .home__subtitle{
@@ -276,6 +297,9 @@ img{
   justify-self: center;
 }
 
+#home {
+  margin-bottom: 100px;
+}
 /*========== BUTTONS ==========*/
 .button{
   display: inline-block;
@@ -380,6 +404,29 @@ img{
   border-radius: .5rem 0 .5rem 0;
 }
 
+@media (max-width: 767px) {
+  .menu__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .menu__content {
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .menu__img {
+    width: 80px;
+    margin-bottom: var(--mb-1);
+  }
+
+  .menu__name {
+    font-size: var(--h3-font-size);
+  }
+
+  .menu__detail, .menu__preci {
+    font-size: var(--small-font-size);
+  }
+}
 /*========== APP ==========*/
 .app__data{
   text-align: center;
